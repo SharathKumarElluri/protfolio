@@ -361,7 +361,7 @@ function showModal(type) {
   }
 
   const images = {
-    "vspaze-offer": "vspaze-offer.png",
+    "vspaze-offer": "c:\Users\shara\Downloads\Vspaze_Technologies offder letter main.pdf(1).pdf",
     "vspaze-certificate": "vspaze-certificate.png",
     "cognifyz-offer": "cognifyzofferletter.jpeg",
     "cognifyz-certificate": "cognifyz-certificate.png"
