@@ -6,11 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio - E Sharath Kumar</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="index.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <style>
+    /* Replaces the old inline style attributes so the HTML has no inline CSS. */
+    #navbar > ul > li:nth-child(1) { --i: 1; }
+    #navbar > ul > li:nth-child(2) { --i: 2; }
+    #navbar > ul > li:nth-child(3) { --i: 3; }
+    #navbar > ul > li:nth-child(4) { --i: 4; }
+    #navbar > ul > li:nth-child(5) { --i: 5; }
+    #navbar > ul > li:nth-child(6) { --i: 6; }
+
+    .college-profile-hidden,
+    .star-rating-hidden {
+      display: none;
+    }
+
+    .languages-heading {
+      margin-top: 20px;
+    }
+
+    .contact-title {
+      margin-bottom: 5px;
+    }
+
+    .success-message-hidden {
+      display: none;
+    }
+  </style>
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 </head>
 
@@ -38,12 +61,12 @@
 
     <nav class="navbar" id="navbar">
       <ul>
-        <li style="--i: 1"><a href="#main">Home</a></li>
-        <li style="--i: 2"><a href="#about">About</a></li>
-        <li style="--i: 3"><a href="#education">Education</a></li>
+        <li><a href="#main">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
         <li><a href="#courses">Courses</a></li>
-        <li style="--i: 4"><a href="#projects">Projects</a></li>
-        <li style="--i: 5"><a href="#Contact">Contact</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#Contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -103,14 +126,14 @@
       <div class="scroll-divider"></div>
       <div class="details-panel" id="detailsPanel">
         <p class="description" id="collegeDescription">Click on any Education to view details.</p>
-        <div class="college-profile" id="collegeProfile" style="display: none;">
+        <div class="college-profile college-profile-hidden" id="collegeProfile">
           <img id="collegeLogo" src="" alt="Logo" class="college-logo">
           <div>
             <div class="profile-name" id="collegeName"></div>
             <div class="profile-title" id="collegeClass"></div>
           </div>
         </div>
-        <div class="star-rating" id="collegeRating" style="display: none;">
+        <div class="star-rating star-rating-hidden" id="collegeRating">
           <span></span> <span id="ratingValue"></span>
         </div>
       </div>
@@ -222,7 +245,7 @@
                 <span class="badge"><i class="fas fa-file-word"></i> MS Word</span>
               </div>
 
-              <div class="category-title" style="margin-top:20px;">
+              <div class="category-title languages-heading">
                 <i class="fas fa-language"></i>
                 <h3>Languages</h3>
               </div>
@@ -252,7 +275,7 @@
             </div>
             <div class="details">
               <h3 class="role-name">Full Stack Developer Intern</h3>
-              <a href="file:///C:/Users/shara/Downloads/Vspaze_Technologies%20offder%20letter%20mainm(1).pdf" target="_blank" class="company-link">vspazetechnologies.in ·
+              <a href="file:///C:/Users/shara/Downloads/Vspaze_Technologies%20offder%20letter%20mainm(1).pdf" target="_blank" rel="noopener noreferrer" class="company-link">vspazetechnologies.in ·
                 Internship</a>
               <p class="duration">MARCH 2026 - June 2026 · 3 months</p>
               <p class="location">Hyderabad, Telangana, India · Remote</p>
@@ -352,7 +375,7 @@
         <div class="certificate-content">
           <h3>Build Your Own Static Website</h3>
           <p>NxtWave</p>
-          <a href="build own static website.png" target="_blank" class="btn">
+          <a href="build own static website.png" target="_blank" rel="noopener noreferrer" class="btn">
             View Certificate
           </a>
         </div>
@@ -363,7 +386,7 @@
         <div class="certificate-content">
           <h3>Build Your Own Responsive Website</h3>
           <p>NxtWave</p>
-          <a href="Bulid Own Responsive Website.png" target="_blank" class="btn">
+          <a href="Bulid Own Responsive Website.png" target="_blank" rel="noopener noreferrer" class="btn">
             View Certificate
           </a>
         </div>
@@ -374,7 +397,7 @@
         <div class="certificate-content">
           <h3>AI & RPA Workshop</h3>
           <p>NxtWave</p>
-          <a href="nxtwave certificate.jpeg" target="_blank" class="btn">
+          <a href="nxtwave certificate.jpeg" target="_blank" rel="noopener noreferrer" class="btn">
             View Certificate
           </a>
         </div>
@@ -384,7 +407,7 @@
   </div>
 </section>
 
-  <h2 style="margin-bottom: 5px;">Contact </h2>
+  <h2 class="contact-title">Contact</h2>
   <!-- Contact Section -->
   <section id="Contact" class="contact-section reveal">
 
@@ -401,7 +424,7 @@
         <button type="submit" class="btn-primary">Send Message</button>
 
         <!-- Success Message -->
-        <div id="successMessage" style="display: none;" class="success-message">
+        <div id="successMessage" class="success-message success-message-hidden">
           <i class="fas fa-check-circle success-icon"></i>
           <p>Message sent successfully!</p>
         </div>
@@ -418,7 +441,7 @@
         </p>
         <div class="contact-boxes">
           <div class="box">
-            <a href="https://wa.me/6303485673" target="_blank">
+            <a href="..." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" title="WhatsApp">
               <div class="icon-circle green"><i class="fab fa-whatsapp"></i></div>
               <div class="text">
                 <strong>What's App</strong><br />
@@ -429,7 +452,7 @@
         </div>
 
         <div class="box">
-          <a href="tel:+6303485673">
+          <a href="tel:+6303485673" aria-label="Phone" title="Phone">
             <div class="icon-circle orange"><i class="fas fa-phone"></i></div>
             <div class="text">
               <strong>Phone</strong><br />
@@ -439,7 +462,7 @@
     </div>
 
     <div class="box">
-      <a href="https://www.linkedin.com/in/sharath-kumar-elluri/">
+      <a href="https://www.linkedin.com/in/sharath-kumar-elluri/" aria-label="LinkedIn" title="LinkedIn">
         <div class="icon-circle blue"><i class="fab fa-linkedin-in"></i></div>
         <div class="text">
           <strong>LinledIn</strong><br />
@@ -450,7 +473,7 @@
     </div>
 
     <div class="box">
-      <a href="mailto:sharathelluri9@gmail.com">
+      <a href="mailto:sharathelluri9@gmail.com" aria-label="Email" title="Email">
         <div class="icon-circle purple"><i class="fas fa-envelope"></i></div>
         <div class="text">
           <strong>Email</strong><br />
@@ -463,10 +486,10 @@
 
     <div class="social">
       <span>Social Media :</span>
-      <a href="https://github.com/SharathKumarElluri"><i class="fab fa-github"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="https://www.linkedin.com/in/sharath-kumar-elluri/"><i class="fab fa-linkedin-in"></i></a>
-      <a href="https://www.instagram.com/sharath__021/"><i
+      <a href="https://github.com/SharathKumarElluri" aria-label="GitHub" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="#" aria-label="Twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.linkedin.com/in/sharath-kumar-elluri/" aria-label="LinkedIn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://www.instagram.com/sharath__021/" aria-label="Instagram" title="Instagram"><i
           class="fab fa-instagram"></i></a>
     </div>
   </section>
